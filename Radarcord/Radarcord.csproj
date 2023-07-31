@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <AssemblyName>Radarcord.NET</AssemblyName>
+    <RootNamespace>Radarcord</RootNamespace>
+    <OutputType>Library</OutputType>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageVersion>1.0.0</PackageVersion>
+    <Description>Radarcord DSharpPlus integration</Description>
+    <PackageTags>discord;dsharpplus;radarcord</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseFile>Radarcord.LICENSE.txt</PackageLicenseFile>
+    <PackageReleaseNotes><![CDATA[
+      Initial Release
+    ]]></PackageReleaseNotes>
+    <Copyright><![CDATA[ 
+      Copyright (c) 2023 - present Yoshiboi18303
+    ]]></Copyright>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/Radarcord/Radarcord.NET.git</RepositoryUrl>
+    <Authors>Yoshiboi18303</Authors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DSharpPlus" Version="4.4.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include=".\README.md" Pack="true" PackagePath="/" />
+    <None Include=".\Radarcord.LICENSE.txt" Pack="true" PackagePath="/" />
+  </ItemGroup>
+
+</Project>
