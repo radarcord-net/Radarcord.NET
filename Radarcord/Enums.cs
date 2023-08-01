@@ -4,14 +4,29 @@ namespace Radarcord.Enums;
 
 public enum IntervalPreset
 {
+    /// <summary>
+    /// 120 seconds.
+    /// </summary>
     Default,
+    /// <summary>
+    /// 180 seconds.
+    /// </summary>
     Safe,
+    /// <summary>
+    /// 240 seconds.
+    /// </summary>
     SuperSafe,
+    /// <summary>
+    /// 300 seconds.
+    /// </summary>
     ExtraSafe,
+    /// <summary>
+    /// 360 seconds.
+    /// </summary>
     SuperOmegaSafe
 }
 
-public static class IntervalPresetMethods
+internal static class IntervalPresetMethods
 {
     public static int GetInterval(IntervalPreset preset)
     {

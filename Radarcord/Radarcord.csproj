@@ -8,13 +8,14 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <PackageVersion>1.0.0</PackageVersion>
+    <PackageVersion>1.0.1</PackageVersion>
     <Description>Radarcord DSharpPlus integration</Description>
     <PackageTags>discord;dsharpplus;radarcord</PackageTags>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseFile>Radarcord.LICENSE.txt</PackageLicenseFile>
     <PackageReleaseNotes><![CDATA[
-      Initial Release
+      Fixed post bug.
+      Added extra XML comments.
     ]]></PackageReleaseNotes>
     <Copyright><![CDATA[ 
       Copyright (c) 2023 - present Yoshiboi18303

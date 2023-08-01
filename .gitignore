@@ -3,3 +3,6 @@
 **/.vscode
 **/*.sln
 !Radarcord.NET.sln
+
+# Not done yet
+RadarcordDiscordNet/

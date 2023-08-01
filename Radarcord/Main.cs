@@ -24,6 +24,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Net.Http;
+using System.Text;
 using System.Threading.Tasks;
 
 using DSharpPlus;
@@ -36,6 +37,7 @@ namespace Radarcord;
 
 public class RadarcordClient
 {
+    #region Fields
     /// <summary>
     /// Your DSharpPlus client, NOT SETTABLE.
     /// </summary>
@@ -45,6 +47,7 @@ public class RadarcordClient
     /// </summary>
     public string Authorization { get; set; }
     private string _apiBase { get; } = "https://radarcord.net/api";
+    #endregion
 
     /// <summary>
     /// Creates a new instance of the RadarcordClient class
@@ -57,6 +60,7 @@ public class RadarcordClient
         Authorization = authorization;
     }
 
+    #region Methods
     /// <summary>
     /// Posts your bot's stats to the Radarcord API.
     /// </summary>
@@ -68,13 +72,14 @@ public class RadarcordClient
         using var httpClient = new HttpClient();
 
         httpClient.DefaultRequestHeaders.Add("Authorization", Authorization);
+        httpClient.DefaultRequestHeaders.Add("ContentType", "application/json");
 
         var payload = new Dictionary<string, int>
         {
             { "guilds", Discord.Guilds.Count },
             { "shards", shardCount }
         };
-        var content = new StringContent(JsonConvert.SerializeObject(payload));
+        var content = new StringContent(JsonConvert.SerializeObject(payload), Encoding.UTF8, "application/json");
 
         try
         {
@@ -138,4 +143,5 @@ public class RadarcordClient
             throw new RadarcordException($"[RADARCORD] An exception occurred.\n{err}");
         }
     }
+    #endregion
 }
